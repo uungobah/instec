@@ -40,6 +40,8 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/AdminLTE.css">
+		<link rel="stylesheet" href="css/dataTables.bootstrap.css">
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -47,7 +49,10 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
+		<!--dataTable-->
+		<script src="js/jquery.dataTables.js"></script>
+		<script src="js/dataTables.bootstrap.js"></script>
+		<script src="js/global.js"></script>
 	</head>
 	<script type="text/javascript">
 		function activeServices() {
@@ -112,6 +117,19 @@
 
             $("#li-equipment").attr("class","colorlib-active");
         }
+
+        $(function () {
+            $('#example1').DataTable()
+            $('#example2').DataTable({
+                'paging'      : true,
+                'lengthChange': false,
+                'searching'   : false,
+                'ordering'    : true,
+                'info'        : true,
+                'autoWidth'   : false
+            })
+        })
+
 	</script>
 	<body>
 	<div id="colorlib-page">
@@ -147,10 +165,7 @@
 					<br>
 					Fax  : (+62)021 – 293 6741
 				<br>
-
-				Email : enquiry@instecbajamandiri.com
-					<br>
-					Web    : www.instecbajamandiri.com
+					<span>Email: <a target="_blank">enquiry@instecbajamandiri.com</a></span>
 				</small></p>
 
 
@@ -429,22 +444,25 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 								<a href="#team-menu" class="blog-img"><img src="images/instec/team1.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
 								<div class="desc">
 									<h3>Endang Wijaya</h3>
-									<p align="justify">SPECIALIZE : ADVANCED NON DESTRUCTIVE TESTING SERVICES</p>
-									<p align="justify">EDUCATION : DEGREE IN MECHANICAL ENGINEER</p>
-									<p align="justify">CERTIFICATION : 
+									<p align="justify">
+										Specialize 		: Advanced Non Destructive Testing Services
+									<br/>
+										Education 		: Degree in Mechanical Engineer
+									<br/>
+										Certification 	: 
 										<ul>
-										<li>CSWIP PHASED ARRAY ULTRASONIC TESTING (PAUT)</li>
-										<li>PCN TIME OF FRIGHT DIFRACTION (ToFD)</li>
-										<li>PCN ULTRASONIC TESTING (UT)</li>
+										<li>CSWIP Phased Array Ultrasonic Testing (PAUT)</li>
+										<li>PCN Time Of Fright Difraction (ToFD)</li>
+										<li>PCN Ultrasonic Testing (UT)</li>
 										<li>PCN Automatic Ultrasonic Testing (AUT))</li>
 										</ul>
 
 									</p>
-									<p align="justify">NDT EXPERIENCE : MORE THEN 15 YEARS IN OFFSHORE AND ONSHORE</p>
+									<p align="justify">NDT Experience : More than 15 years in offshore and onshore</p>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+						<!--<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
 							<div class="blog-entry">
 								<a href="#team-menu" class="blog-img"><img src="images/instec/team2.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
 								<div class="desc">
@@ -463,20 +481,23 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									<p align="justify">NDT EXPERIENCE : MORE THEN 4 YEARS IN NDT INSPECTION </p>
 								</div>
 							</div>
-						</div>
+						</div>-->
 						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
 							<div class="blog-entry">
-								<a href="#team-menu" class="blog-img"><img src="images/instec/team2.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
+								<a href="#team-menu" class="blog-img"><img src="images/instec/team1.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
 								<div class="desc">
 									<h3>Desri</h3>
-									<p align="justify">SPECIALIZE : MANAGEMENT</p>
-									<p align="justify">EDUCATION : DEGREE IN MECHANICAL ENGINEER</p>
-									<p align="justify">CERTIFICATION : 
+									<p align="justify">
+										Specialize 		: Management
+									<br/>
+										Educatuon 		: Degree in Mechanical Engineer
+									<br/>
+										Certification 	: 
 									<ul>
-										<li>ASNT ULTRASONIC TESTING</li>
-										<li>ASNT MAGNETIC PARTICLE TESTING</li>
-										<li>ASNT PENETRANT TESTING</li>
-										<li>IN HOUSE PHASED ARRAY ULTRASONIC TESTING</li>
+										<li>ASNT Ultrasonic Testing</li>
+										<li>ASNT Magnetic Particle Testing</li>
+										<li>ASNT Penetrant Testing</li>
+										<li>In House Phased Array Ultrasonic Testing</li>
 									</ul>
 
 									</p>
@@ -528,11 +549,177 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					</div>
 					<div class="row">
 						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/instec/equipment1.jpg);">
+							<div class="box">
+							<div class="box-body">
+								<table id="example1" class="table table-bordered table-striped">
+
+									<thead style="background-color: #FFC300;">
+									<tr>
+									<th >No</th>
+									<th >Description</th>
+									<th >Unit</th>
+									<th >UoM</th>
+									<th >Remarks</th>
+									</tr>
+									</thead>
+
+									<tr>
+										<td>1</td>
+										<td>OMNISCAN MX 2</td>
+										<td>2</td>
+										<td>Unit</td>
+										<td>Good Condition</td>
+									</tr>
+
+									<tr>
+										<td>2</td>
+										<td>WEDGES SA12 N55 IHC</td>
+										<td>4</td>
+										<td>Pcs</td>
+										<td>Good Condition</td>
+									</tr>
+
+									<tr>
+										<td>3</td>
+										<td>Wedges SA10 N55 IHC</td>
+										<td>4</td>
+										<td>Pcs</td>
+										<td>Good Condition</td>
+									</tr>
+
+									<tr>
+										<td>4</td>
+										<td>OMNISCAN PROBE 5L64 SERIES</td>
+										<td>4</td>
+										<td>Pcs</td>
+										<td>Good Condition</td>
+									</tr>
+
+									<tr>
+										<td>5</td>
+										<td>OMNISCAN PROBE 10L32 SERIES</td>
+										<td>4</td>
+										<td>Pcs</td>
+										<td>Good Condition</td>
+									</tr>
+
+									<tr>
+										<td>6</td>
+										<td>COBRA SCANNER</td>
+										<td>1</td>
+										<td>Pcs</td>
+										<td>Good Condition</td>
+									</tr>
+
+									<tr>
+										<td>7</td>
+										<td>KRAUTKRAMER USM 35</td>
+										<td>2</td>
+										<td>Unit</td>
+										<td>Good Condition</td>
+									</tr>
+
+									<tr>
+										<td>8</td>
+										<td>EPOCH 600</td>
+										<td>2</td>
+										<td>Unit</td>
+										<td>Good Condition</td>
+									</tr>
+
+									<tr>
+										<td>9</td>
+										<td>V1 CALIBRATION BLOCK</td>
+										<td>1</td>
+										<td>Pcs</td>
+										<td>Good Condition</td>
+									</tr>
+
+									<tr>
+										<td>10</td>
+										<td>V2 CALIBRATION BLOCK</td>
+										<td>1</td>
+										<td>Pcs</td>
+										<td>Good Condition</td>
+									</tr>
+
+									<tr>
+										<td>11</td>
+										<td>IOW CALIBRATION BLOCK</td>
+										<td>1</td>
+										<td>Pcs</td>
+										<td>Good Condition</td>
+									</tr>
+
+									<tr>
+										<td>12</td>
+										<td>YOKE MAGNETIC</td>
+										<td>1</td>
+										<td>2Pcs</td>
+										<td>Good Condition</td>
+									</tr>
+
+									<tr>
+										<td>13</td>
+										<td>BURMA CASTROL</td>
+										<td>3</td>
+										<td>Unit</td>
+										<td>Good Condition</td>
+									</tr>
+									<tr>
+										<td>14</td>
+										<td>MPI BLOCK CALIBRATION</td>
+										<td>2</td>
+										<td>Unit</td>
+										<td>Good Condition</td>
+									</tr>
+
+									<tr>
+										<td>15</td>
+										<td>V1 CALIBRATION BLOCK</td>
+										<td>1</td>
+										<td>Pcs</td>
+										<td>Good Condition</td>
+									</tr>
+
+									<tr>
+										<td>16</td>
+										<td>V2 CALIBRATION BLOCK</td>
+										<td>1</td>
+										<td>Pcs</td>
+										<td>Good Condition</td>
+									</tr>
+
+									<tr>
+										<td>17</td>
+										<td>IOW CALIBRATION BLOCK</td>
+										<td>1</td>
+										<td>Pcs</td>
+										<td>Good Condition</td>
+									</tr>
+
+									<tr>
+										<td>18</td>
+										<td>YOKE MAGNETIC</td>
+										<td>2</td>
+										<td>Unit</td>
+										<td>Good Condition</td>
+									</tr>
+
+									<tr>
+										<td>19</td>
+										<td>THICKNESS GAUGING</td>
+										<td>2</td>
+										<td>Unit</td>
+										<td>Good Condition</td>
+									</tr>
+
+								</table>
 
 							</div>
+							</div>
 						</div>
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+						<!--<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
 							<div class="project" style="background-image: url(images/instec/equipment2.jpg);">
 
 							</div>
@@ -541,7 +728,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 							<div class="project" style="background-image: url(images/instec/equipment3.jpg);">
 
 							</div>
-						</div>
+						</div>-->
 
 					</div>
 				</div>
